@@ -9,7 +9,6 @@ import '../../providers/reminder_provider.dart';
 import '../../providers/routine_provider.dart';
 import '../../providers/event_provider.dart';
 import '../tasks/add_task_sheet.dart';
-import '../reminders/add_reminder_sheet.dart';
 import '../agenda/add_event_sheet.dart';
 
 class SearchScreen extends StatefulWidget {

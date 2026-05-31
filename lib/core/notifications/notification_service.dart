@@ -16,7 +16,7 @@ class NotificationService {
     const androidInit = AndroidInitializationSettings('@mipmap/ic_launcher');
     const initSettings = InitializationSettings(android: androidInit);
     await _plugin.initialize(
-      initSettings,
+      settings: initSettings,
       onDidReceiveNotificationResponse: _onNotificationTap,
     );
     await _createChannel();
@@ -54,14 +54,12 @@ class NotificationService {
     final scheduled = tz.TZDateTime.from(dateTime, tz.local);
     if (scheduled.isBefore(tz.TZDateTime.now(tz.local))) return;
     await _plugin.zonedSchedule(
-      id,
-      title,
-      body,
-      scheduled,
-      _detailsFor(body),
+      id: id,
+      title: title,
+      body: body,
+      scheduledDate: scheduled,
+      notificationDetails: _detailsFor(body),
       androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
-      uiLocalNotificationDateInterpretation:
-          UILocalNotificationDateInterpretation.absoluteTime,
     );
   }
 
@@ -75,19 +73,17 @@ class NotificationService {
       scheduled = scheduled.add(const Duration(days: 7));
     }
     await _plugin.zonedSchedule(
-      id,
-      title,
-      body,
-      scheduled,
-      _detailsFor(body),
+      id: id,
+      title: title,
+      body: body,
+      scheduledDate: scheduled,
+      notificationDetails: _detailsFor(body),
       androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
-      uiLocalNotificationDateInterpretation:
-          UILocalNotificationDateInterpretation.absoluteTime,
       matchDateTimeComponents: DateTimeComponents.dayOfWeekAndTime,
     );
   }
 
-  Future<void> cancel(int id) async => _plugin.cancel(id);
+  Future<void> cancel(int id) async => _plugin.cancel(id: id);
   Future<void> cancelAll() async => _plugin.cancelAll();
 
   Future<bool> requestPermission() async {

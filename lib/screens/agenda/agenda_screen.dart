@@ -7,7 +7,6 @@ import 'package:table_calendar/table_calendar.dart';
 import '../../core/theme/app_theme.dart';
 import '../../models/event_model.dart';
 import '../../providers/event_provider.dart';
-import '../../widgets/futura_tile.dart';
 import 'add_event_sheet.dart';
 
 class AgendaScreen extends StatefulWidget {

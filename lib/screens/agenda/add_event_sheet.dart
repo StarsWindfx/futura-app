@@ -22,7 +22,6 @@ class _AddEventSheetState extends State<AddEventSheet> {
   bool _loading = false;
 
   static const _colors = [C.ink, C.blue, C.ok, C.warn, C.err];
-  static const _colorLabels = ['Blanc', 'Bleu', 'Vert', 'Orange', 'Rouge'];
 
   @override
   void initState() {

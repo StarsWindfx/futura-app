@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 import '../../core/theme/app_theme.dart';
 import '../../models/routine_model.dart';
 import '../../providers/routine_provider.dart';
-import '../../widgets/futura_tile.dart';
 import 'add_routine_sheet.dart';
 
 class RoutinesScreen extends StatelessWidget {
