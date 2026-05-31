@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futura — Téléchargement</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #080808;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      background: #111111;
+      border: 0.5px solid #1e1e1e;
+      border-radius: 24px;
+      padding: 48px 40px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .icon { font-size: 64px; margin-bottom: 20px; display: block; line-height: 1; }
+
+    h1 {
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: -0.8px;
+      margin-bottom: 6px;
+    }
+
+    .subtitle { color: #555; font-size: 14px; margin-bottom: 28px; }
+
+    .badges {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: #161616;
+      border: 0.5px solid #222;
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 11px;
+      color: #666;
+      font-family: 'JetBrains Mono', 'Courier New', monospace;
+    }
+
+    .badge.version { color: #fff; border-color: #333; }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #ffffff;
+      color: #080808;
+      text-decoration: none;
+      border-radius: 14px;
+      padding: 16px 28px;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      transition: opacity 0.15s, transform 0.1s;
+    }
+
+    .btn:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn:active { opacity: 0.8; transform: translateY(0); }
+    .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    .note {
+      margin-top: 18px;
+      font-size: 12px;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    .note strong { color: #555; }
+
+    hr {
+      border: none;
+      border-top: 0.5px solid #1a1a1a;
+      margin: 28px 0;
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: left;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      color: #444;
+    }
+
+    .dot {
+      width: 4px;
+      height: 4px;
+      background: #2a2a2a;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <span class="icon">⚡</span>
+    <h1>Futura</h1>
+    <div class="subtitle">App de productivité</div>
+
+    <div class="badges">
+      <span class="badge version">v1.0.0</span>
+      <span class="badge">Android</span>
+      <span class="badge">Flutter</span>
+    </div>
+
+    <a href="https://github.com/StarsWindfx/futura-app/releases/latest/download/futura.apk"
+       class="btn" download="futura.apk">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      Télécharger l'APK
+    </a>
+
+    <p class="note">
+      Activer <strong>Sources inconnues</strong> dans les paramètres Android<br>
+      avant d'installer · Android 8.0+
+    </p>
+
+    <hr>
+
+    <div class="features">
+      <div class="feature"><div class="dot"></div>Tâches · Routines · Sport</div>
+      <div class="feature"><div class="dot"></div>Rappels · Agenda</div>
+      <div class="feature"><div class="dot"></div>Widgets écran d'accueil</div>
+      <div class="feature"><div class="dot"></div>Notifications intelligentes</div>
+      <div class="feature"><div class="dot"></div>Thème sombre minimal</div>
+    </div>
+  </div>
+</body>
+</html>
