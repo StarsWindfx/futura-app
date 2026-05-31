@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Futura</string>
+    <string name="widget_tasks_label">Futura — Tâches</string>
+    <string name="widget_reminders_label">Futura — Rappels</string>
+    <string name="widget_agenda_label">Futura — Agenda</string>
+    <string name="widget_routines_label">Futura — Routines</string>
+</resources>
